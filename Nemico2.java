@@ -16,7 +16,7 @@ public class Nemico2 extends Nemico{
 
             switch (numeroCasualeRange) {
                 case 1:
-                    System.out.println("Danni: " + 20 ); //se modifichi danno, sia qui che riga sotto
+                    System.out.println("Danni: " + 20 ); //se modifichi danno, sia qui che riga sotto, sia nel system out nel main
                     return 20 ;
                 case 2:
                     System.out.println("Danni: " + 30 );

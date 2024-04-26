@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Mago extends Personaggio {
 
     public Mago() {
-        super(60, 100, 1);
+        super(60, 100, 0);
     }
 
     // restituisce un danno che dipende dal livello e un lancio casuale, se non si
@@ -123,7 +123,7 @@ public class Mago extends Personaggio {
     public void abilità() {
         System.out.println("il mago usa abilità spaciale: ");
         int costoEnergia = 50;
-        int aumentoSalute = 30;
+        int aumentoSalute = 50;
         if (getEnergia() >= costoEnergia ) {
             if (getSalute()+aumentoSalute <= 100){
 

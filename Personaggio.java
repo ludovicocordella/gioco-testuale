@@ -13,14 +13,16 @@ abstract class Personaggio {
     }
 
     public int getSalute() {
-        if (salute < 20) {
-            System.out.println("Livello di salute basso!");
-        }
+        if (salute < 0) {
+            return 0;
+            
+
+        } 
         return salute;
     }
 
     public void setSalute(int salute) {
-        if (salute >= 0)  {
+        if (salute > 0)  {
             this.salute = salute;
         } else{
             System.out.println("La salute non può essere negativa");
@@ -29,6 +31,12 @@ abstract class Personaggio {
 
     public void subiscidanno(int danno) {
         this.salute= getSalute()-danno;
+        if(salute<0){
+            System.out.println("Salute esaurita...\nGAME OVER\n :( :( :(");
+        } else if (salute < 20) {
+            System.out.println("Livello di salute basso!");
+        }else {
+        System.out.println("salute rimasta "+ salute);}
     }
 
     
@@ -57,9 +65,7 @@ abstract class Personaggio {
 
         if (energia >= 0 ) {
             this.energia = energia;
-        } else  {
-            System.out.println("L'energia non può essere negativa");
-        }
+        } 
         
     }
 
@@ -69,6 +75,8 @@ abstract class Personaggio {
 
     public void aumentaLivello() {
         this.livello += 1;
+        if(livello>1){
+        System.out.println("livello aumentato, livello attuale: "+ livello);}
     }
 
     
@@ -77,5 +85,7 @@ abstract class Personaggio {
     public abstract int difendi(int attacco);
 
     public abstract void abilità();
+
+    public abstract int riduciDanni(int difesa, int attacco); 
 
 }
