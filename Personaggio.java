@@ -49,17 +49,6 @@ abstract class Personaggio {
         return energia;
     }
 
-    // public void setEnergia(int energia) {
-
-    //     if (energia >= 0 && energia <= 100) {
-    //         this.energia = energia;
-    //     } else if (energia > 100) {
-    //         System.out.println("La salute non può essere superiore a 100");
-    //     } else if (energia < 0) {
-    //         System.out.println("La salute non può essere negativa");
-    //     }
-        
-    // }
 
     public void setEnergia(int energia) {
 
@@ -84,7 +73,7 @@ abstract class Personaggio {
 
     public abstract int difendi(int attacco);
 
-    public abstract void abilità();
+    public abstract int abilità();
 
     public abstract int riduciDanni(int difesa, int attacco); 
 

@@ -13,13 +13,7 @@ abstract class Nemico{
         return salute;
     }
 
-    // public void setSalute(int salute) {
-    //     if (salute >= 0 && salute <= 100) {
-    //         this.salute = salute;
-    //     } else  {
-    //         System.out.println("La salute non può essere negativa");
-    //     }
-    // }
+   
 
     public  void subiscidanno(int danno){
         if(danno>0){
