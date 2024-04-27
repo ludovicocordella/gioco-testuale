@@ -79,7 +79,7 @@ public class Guerriero extends Personaggio {
     }
 
     public int abilità() {
-        System.out.println("il guerriero usa abilità spaciale: attacco x2");
+        System.out.println("il guerriero usa abilità speciale: attacco x2");
         
        
         int costoEnergia = 50;

@@ -24,10 +24,16 @@ public class Main {
                 mago.abilità();
                 }else if (mago instanceof Guerriero){
                     nemico1.subiscidanno(mago.abilità());
-                }
+                } else if (mago instanceof Ladro ){
                 
+                    if(mago.abilità()==1){
+                        danno=nemico1.attacca();
+                        nemico1.subiscidanno(danno);
+                        continue;
+                    }
+                }
 
-            } else {
+            }   else {
                 System.out.println("coraggioso da parte tua");
             }
 
@@ -96,12 +102,17 @@ public class Main {
             whilelivello(mago, nemico3);
 
         }
+        
+        if (nemico3.getSalute()==0){
+            System.out.println("GAME WIN 🎉🎉🎉🎉🎉");
+        }
     }
 
     public static void main(String[] args) {
 
         Mago mago = new Mago();
         Guerriero guerriero = new Guerriero();
+        Ladro ladro =new Ladro();
         Nemico1 nemico1 = new Nemico1();
         Nemico2 nemico2 = new Nemico2();
         Nemico3 nemico3 = new Nemico3();
@@ -125,9 +136,16 @@ public class Main {
 
         } else if (risposta.equals("3")) {
 
-        } else {
+            System.out.println("Hai scelto il ladro, le tue caratteristiche sono:");
+            System.out.println("salute: " + ladro.getSalute() + " energia: " + ladro.getEnergia()
+                    + "\nl'abilità speciale consiste nel confondere il nemico e così tanto da provocarsi danno da solo");
+            whilegrande(ladro, nemico1, nemico2, nemico3);
 
+        } else {
+            System.out.println("bye bye");
         }
+
+        
 
     }
 }
