@@ -13,7 +13,7 @@ public class Main {
             System.out.println("salute: " + mago.getSalute() + " energia: " + mago.getEnergia());
             System.out.println("salute nemico: " + nemico1.getSalute());
             System.out.println(
-                    "1 per attaccare (10 punti energia) \n2 per abilità speciale (50 punti energia)\naltro per non fare nulla");
+                    "1 per attaccare (10 punti energia) \n2 per abilità speciale (50 punti energia)\n3 per aumentare energia di 10 riducendo salute di 10\naltro per non fare nulla");
             String risposta = parole.nextLine();
             if (risposta.equals("1")) {
 
@@ -32,6 +32,9 @@ public class Main {
                         continue;
                     }
                 }
+            } else if (risposta.equals("3")) {
+
+                mago.aumentoenergia();
 
             }   else {
                 System.out.println("coraggioso da parte tua");
@@ -102,7 +105,7 @@ public class Main {
             whilelivello(mago, nemico3);
 
         }
-        
+
         if (nemico3.getSalute()==0){
             System.out.println("GAME WIN 🎉🎉🎉🎉🎉");
         }

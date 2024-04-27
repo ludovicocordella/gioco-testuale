@@ -31,7 +31,7 @@ abstract class Personaggio {
 
     public void subiscidanno(int danno) {
         this.salute= getSalute()-danno;
-        if(salute<0){
+        if(salute<=0){
             System.out.println("Salute esaurita...\nGAME OVER\n :( :( :(");
         } else if (salute < 20) {
             System.out.println("Livello di salute basso!");
@@ -39,13 +39,20 @@ abstract class Personaggio {
         System.out.println("salute rimasta "+ salute);}
     }
 
-    
+    public void aumentoenergia(){
+
+        int salutepersa=10;
+        int energiapresa=10;
+
+        this.salute= this.salute-salutepersa;
+        this.energia= this.energia+energiapresa;
+        System.out.println("salute: "+ getSalute()+" energia: "+ getEnergia());
+
+    }
 
 
     public int getEnergia() {
-        if (energia < 20) {
-            System.out.println("Livello di energia basso!");
-        }
+        
         return energia;
     }
 
@@ -54,7 +61,9 @@ abstract class Personaggio {
 
         if (energia >= 0 ) {
             this.energia = energia;
-        } 
+        } if (energia < 20) {
+            System.out.println("Livello di energia basso!");
+        }
         
     }
 
