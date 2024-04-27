@@ -1,4 +1,4 @@
-Il gioco si compone di 3 lielli, ognuno con un rispettivo nemico.
+Il gioco si compone di 3 livelli, ognuno con un rispettivo nemico.
 Si può scegliere all'inizio tra 3 personaggi: mago guerriero o ladro (ognuno con le proprie caratteristiche).
 
 In ogni turno il giocatore può decidere se attaccare o se usare l'abilità speciale o se aumentare la propria energia sacrificando la salute, 

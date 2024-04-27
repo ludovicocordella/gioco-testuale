@@ -19,7 +19,7 @@ Ogni attacco costa 10 punti energia,
 ogni abilità speciale 50 punti energia,
 ogni difesa 10 punti energia.
 
-PERSONAGGI:
+# PERSONAGGI:
 
 - mago = salute:60, energia=100
         attacco da 10*liv a 40*liv
@@ -36,7 +36,7 @@ PERSONAGGI:
         difesa da 20*liv a 50*liv
         abilità speciale: all'attacco seguente del nemico, questo si infliggerà danno da solo
 
-NEMICI:
+# NEMICI:
 
 - nemico1 = 100 salute
 	    attacco da 10 a 40
