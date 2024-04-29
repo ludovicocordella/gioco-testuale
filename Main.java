@@ -104,11 +104,14 @@ public class Main {
             }
             whilelivello(mago, nemico3);
 
+            if (nemico3.getSalute()==0){
+                System.out.println("GAME WIN!!!!!!!!!!!! ");
+                break;
+            }
+
         }
 
-        if (nemico3.getSalute()==0){
-            System.out.println("GAME WIN 🎉🎉🎉🎉🎉");
-        }
+      
     }
 
     public static void main(String[] args) {
